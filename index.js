@@ -1,5 +1,11 @@
-const pageWidth = document.documentElement.scrollWidth;
-const pageHeight = document.documentElement.scrollHeight;
+const burgerMenu = document.querySelector('.burger-menu');
+const line = document.querySelectorAll(".line");
+const menu = document.querySelector(".menu");
 
-alert(pageWidth)
-alert(pageHeight)
+
+burgerMenu.addEventListener('click',(event) => {
+    line[0].classList.toggle('first-line-active');
+    line[1].classList.toggle('hidden');
+    line[2].classList.toggle('second-line-active');
+    menu.classList.toggle("hidden");
+})
