@@ -105,9 +105,13 @@ header{
     flex-direction: column;
     justify-content: space-between;
     z-index: 100 ;
+    transition: .3s;
 }
-.burger-menu{
+.burger-menu:hover{
     cursor: pointer;
+}
+.burger-menu-active{
+    transform: rotate(-90deg);
 }
 @media(max-width: 768px){
     .burger-menu{
@@ -118,6 +122,10 @@ header{
 .line{
     border-bottom: 2px solid white;
     margin-bottom: 5px;
+    transition: .5s;
+}
+.line-active{
+    margin-bottom: 7px;
 }
 
 
@@ -133,7 +141,13 @@ header{
     left: 0;
     width: 100%;
     backdrop-filter: blur(5px);
+    transition: .5s;
 }
+
+.menu-hidden{
+    top: -200px;
+}
+
 
 .menu ul{
     list-style-type: none;
